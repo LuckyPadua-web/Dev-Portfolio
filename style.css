@@ -605,6 +605,70 @@ button.btn:hover {
   font-size: 1rem;
   margin: 0;
 }
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.calendar-card {
+  background: #111;
+  border-left: 5px solid #e63946;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calendar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(230, 57, 70, 0.3);
+}
+
+.calendar-date {
+  background: #e63946;
+  color: #fff;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.calendar-date i {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+.calendar-info {
+  padding: 15px 20px;
+  color: #f1f1f1;
+}
+
+.calendar-info p {
+  margin: 8px 0;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+.calendar-info i {
+  color: #e63946;
+  margin-right: 8px;
+}
+
+.calendar-info a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.calendar-info a:hover {
+  color: #e63946;
+  text-decoration: underline;
+}
 
 
 /* ===== Footer ===== */
@@ -613,7 +677,7 @@ footer {
   background: #111;
   padding: 25px;
   margin-top: 60px;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #ccc;
 }
 
