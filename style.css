@@ -549,6 +549,63 @@ button.btn {
 button.btn:hover {
   background: #ff4f5a;
 }
+.contact {
+  background: #111;
+  color: #fff;
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.contact .heading {
+  font-size: 2.5rem;
+  color: #ff4c29;
+  margin-bottom: 60px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #1e1e1e;
+  padding: 20px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(255, 76, 41, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(255, 76, 41, 0.3);
+}
+
+.info-item i {
+  font-size: 1.8rem;
+  color: #ff4c29;
+  min-width: 35px;
+}
+
+.info-item h3 {
+  color: #ff4c29;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  color: #ccc;
+  font-size: 1rem;
+  margin: 0;
+}
+
 
 /* ===== Footer ===== */
 footer {
