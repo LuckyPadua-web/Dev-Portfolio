@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Celebration — Glenn-IT</title>
+    <style>
+        html,body {height:100%; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+        body {display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#0f172a,#07102a); color:#fff; overflow:hidden;}
+        .card {text-align:center; padding:36px 40px; border-radius:12px; background:rgba(255,255,255,0.04); box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+        h1 {margin:0 0 8px; font-size:1.6rem; letter-spacing:0.4px;}
+        p {margin:0 0 16px; opacity:0.9;}
+        button {appearance:none; border:0; background:#10b981; color:white; padding:10px 16px; border-radius:8px; font-weight:600; cursor:pointer;}
+        button:active{transform:translateY(1px);}
+        canvas{position:fixed; inset:0; pointer-events:none;}
+        .sub {font-size:0.85rem; opacity:0.8; margin-top:10px;}
+    </style>
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+
+    <div class="card" role="status" aria-live="polite">
+        <h1>Success! 🎉</h1>
+        <p>You successfully opened the repository — Glenn-IT</p>
+        <div>
+            <button id="replay">Celebrate again</button>
+        </div>
+        <div class="sub">Enjoy exploring the project.</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('confetti');
+        const ctx = canvas.getContext('2d');
+        let W, H, particles = [], animId;
+
+        function resize() {
+            W = canvas.width = innerWidth;
+            H = canvas.height = innerHeight;
+        }
+        addEventListener('resize', resize);
+        resize();
+
+        function rand(min, max){ return Math.random()*(max-min)+min; }
+        const colors = ['#ff4d6d','#ffd166','#6ee7b7','#60a5fa','#a78bfa','#f472b6'];
+
+        function makeParticle(x,y){
+            return {
+                x: x + rand(-20,20),
+                y: y + rand(-10,10),
+                vx: rand(-3,3),
+                vy: rand(-8,-2),
+                size: rand(6,14),
+                rot: rand(0,360),
+                vrot: rand(-8,8),
+                color: colors[(Math.random()*colors.length)|0],
+                life: 0,
+                ttl: rand(60,120)
+            };
+        }
+
+        function burst(centerX, centerY, count=80){
+            for(let i=0;i<count;i++) particles.push(makeParticle(centerX, centerY));
+            if(!animId) loop();
+        }
+
+        function loop(){
+            animId = requestAnimationFrame(loop);
+            ctx.clearRect(0,0,W,H);
+            for(let i=particles.length-1;i>=0;i--){
+                const p = particles[i];
+                p.life++;
+                p.vy += 0.12; // gravity
+                p.x += p.vx;
+                p.y += p.vy;
+                p.rot += p.vrot;
+                const t = p.life/p.ttl;
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate(p.rot * Math.PI/180);
+                ctx.globalAlpha = 1 - t;
+                ctx.fillStyle = p.color;
+                ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size*0.6);
+                ctx.restore();
+                if(p.life > p.ttl || p.y > H + 50) particles.splice(i,1);
+            }
+            if(particles.length===0){
+                cancelAnimationFrame(animId);
+                animId = null;
+            }
+        }
+
+        // initial burst from center-top
+        burst(W/2, H*0.28);
+
+        // replay button
+        document.getElementById('replay').addEventListener('click', ()=>{
+            burst(rand(W*0.2,W*0.8), rand(H*0.15,H*0.35), 120);
+        });
+
+        // small intermittent bursts while idle
+        setInterval(()=> {
+            if(Math.random() < 0.35) burst(rand(W*0.15,W*0.85), rand(H*0.12,H*0.35), rand(30,80));
+        }, 1800);
+    </script>
+</body>
+</html></div>
