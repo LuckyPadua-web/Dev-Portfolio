@@ -1000,7 +1000,87 @@ section {
     width: 80px;
     height: 80px;
   }
+
+  /* Mobile list-style for Capstone Projects: compact stacked list */
+  .projects-container {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .project-card {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    max-width: 100%;
+    text-align: left;
+    cursor: default;
+    border: 1px solid rgba(79, 70, 229, 0.08);
+    background: linear-gradient(135deg, #0f0f0f 0%, #14141a 100%);
+  }
+
+  /* Make the title act as the toggle */
+  .project-card h3 {
+    font-size: 1.05rem;
+    margin: 0 0 4px 0;
+    padding-right: 26px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* Caret indicator */
+  .project-card h3::after {
+    content: "\25BC"; /* downward caret */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    color: #9ca3af;
+    font-size: 0.9rem;
+  }
+
+  .project-card.expanded h3::after {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+
+  /* Hidden body that expands */
+  .project-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    margin-top: 8px;
+  }
+
+  .project-card.expanded .project-body {
+    /* large enough to accommodate content; JS will set exact max-height when expanding */
+    max-height: 1000px;
+  }
+
+  .project-body p {
+    margin: 6px 0;
+    color: #bfc3c8;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  /* Nested adjustment for very small screens */
+  @media (max-width: 480px) {
+    .project-card {
+      padding: 10px 12px;
+    }
+
+    .project-card h3 {
+      font-size: 1rem;
+    }
+
+    .project-body p {
+      font-size: 0.9rem;
+    }
+  }
 }
+
+/* ...existing code... */
 
 .contact-card {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
