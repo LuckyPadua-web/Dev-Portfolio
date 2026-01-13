@@ -100,17 +100,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create mobile accordion for project cards
   function initProjectAccordion() {
     const isMobile = window.innerWidth <= 768;
-    const projectCards = document.querySelectorAll('.projects .project-card');
+    const projectCards = document.querySelectorAll(".projects .project-card");
 
     projectCards.forEach((card) => {
-      const header = card.querySelector('h3');
+      const header = card.querySelector("h3");
       if (!header) return;
 
       // If a .project-body already exists, leave it; otherwise create and move content
-      let body = card.querySelector('.project-body');
+      let body = card.querySelector(".project-body");
       if (!body) {
-        body = document.createElement('div');
-        body.className = 'project-body';
+        body = document.createElement("div");
+        body.className = "project-body";
 
         // Move all siblings after header into the body
         let sibling = header.nextElementSibling;
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Reset any inline styles/classes when not mobile
       if (!isMobile) {
-        card.classList.remove('expanded');
+        card.classList.remove("expanded");
         body.style.maxHeight = null;
         // Move body children back (optional: keep structure but visible)
         // We leave DOM structure intact so desktop CSS continues to display content normally
@@ -133,18 +133,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Ensure collapsed initial state
-      card.classList.remove('expanded');
-      body.style.maxHeight = '0px';
+      card.classList.remove("expanded");
+      body.style.maxHeight = "0px";
 
       // Add click toggle on header
-      header.style.cursor = 'pointer';
-      header.addEventListener('click', function () {
-        const expanded = card.classList.toggle('expanded');
+      header.style.cursor = "pointer";
+      header.addEventListener("click", function () {
+        const expanded = card.classList.toggle("expanded");
         if (expanded) {
           // set explicit maxHeight for smooth transition
-          body.style.maxHeight = body.scrollHeight + 'px';
+          body.style.maxHeight = body.scrollHeight + "px";
         } else {
-          body.style.maxHeight = '0px';
+          body.style.maxHeight = "0px";
         }
       });
     });
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Debounced resize handler to reinitialize accordion
   let resizeTimer;
-  window.addEventListener('resize', function () {
+  window.addEventListener("resize", function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
       initProjectAccordion();
@@ -161,5 +161,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize on load
   initProjectAccordion();
-
 });
