@@ -13,6 +13,7 @@ A modern, professional portfolio website showcasing capstone project ideas for P
 ## 🚀 Features
 
 ### Sections:
+
 1. **Home** - Hero sections for both Lead and Co-Developer
 2. **About Us** - Detailed profiles of the development team
 3. **Skills** - Technology stack showcase with icons
@@ -24,6 +25,7 @@ A modern, professional portfolio website showcasing capstone project ideas for P
 ### Project Categories:
 
 #### Web-Based Systems:
+
 - Healthcare & Medical Systems
 - Government & LGU Management
 - Educational Systems
@@ -31,6 +33,7 @@ A modern, professional portfolio website showcasing capstone project ideas for P
 - Business & Commerce Platforms
 
 #### Mobile Applications:
+
 - Barangay Services
 - Health Monitoring
 - Emergency Response
@@ -70,10 +73,12 @@ A modern, professional portfolio website showcasing capstone project ideas for P
 ## 📧 Contact Information
 
 **Lead Developer:** Glenard Pagurayan
+
 - GitHub: [@Glenn-IT](https://github.com/Glenn-IT)
 - Email: glenard.pagurayan@example.com
 
 **Co-Developer:** Lucky Padua
+
 - GitHub: [@LuckyPadua-web](https://github.com/LuckyPadua-web)
 - Email: luckypadua4@gmail.com
 
