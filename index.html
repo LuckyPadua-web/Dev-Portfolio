@@ -1,570 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Capstones System Developer | Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0e6b1d1.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstones System Developer | Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ===== Header ===== -->
+    <header>
+      <div class="logo">CapstoneSystem<span>Developers</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="menu-toggle" class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
 
-  <!-- ===== Header ===== -->
-  <header>
-    <div class="logo">CapstoneSystem<span>Developers</span></div>
-    <nav>
-      <!-- Font Awesome CDN for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></div>
-    </nav>
-  </header>
-
-  <!-- ===== HOME SECTION (Lead Developer) ===== -->
-<section id="home" class="home">
-  <div class="home-content">
-    <h1>Hello, I'm <span>Glenard Pagurayan</span></h1>
-    <h3>I'm a <span class="typing-text" data-text="Lead Developer"></span></h3>
-    <p>
-      A passionate web developer focused on creating beautiful, responsive, and user-friendly capstone systems.
-      I specialize in transforming innovative ideas into powerful digital solutions using modern web technologies.
-    </p>
-    <div class="home-buttons">
-      <a href="#co-developer" class="btn">Meet My Team</a>
-      <a href="#projects" class="btn-outline">View Projects</a>
-    </div>
-  </div>
-
-  <div class="home-img">
-    <img src="img/Glenn.png" alt="Lead Developer - Glenard Pagurayan">
-  </div>
-</section>
-
-<!-- ===== CO-DEVELOPER SECTION ===== -->
-<section id="co-developer" class="home co-dev">
-  <div class="home-content">
-    <h1>Hello, I'm <span>Lucky Padua</span></h1>
-    <h3>I'm a <span class="typing-text" data-text="Co-Developer"></span></h3>
-    <p>
-      A dedicated web designer and co-developer specializing in creating clean, interactive,
-      and accessible user interfaces. I transform creative visions into seamless digital experiences
-      that engage and inspire users.
-    </p>
-    <div class="home-buttons">
-      <a href="#about" class="btn">Learn More</a>
-      <a href="#contact" class="btn-outline">Build a Project with us!</a>
-    </div>
-  </div>
-
-  <div class="home-img">
-    <img src="img/Lucky.png" alt="Co Developer - Lucky Padua">
-  </div>
-</section>
-
-
-<!-- ===== ABOUT SECTION (Updated to About Us) ===== -->
-<section id="about" class="about">
-  <h2>About Us</h2>
-  <p class="section-subtitle">Meet the developers behind innovative capstone solutions</p>
-
-  <div class="about-container">
-    <!-- Main Developer -->
-    <div class="about-box">
-      <div class="about-img">
-        <img src="img/Glenn1.png" alt="Glenard Pagurayan - Lead Developer">
-      </div>
-      <div class="about-content">
-        <h3>Glenard Pagurayan</h3>
-        <h4>Lead Developer</h4>
+    <!-- ===== HOME SECTION (Lead Developer) ===== -->
+    <section id="home" class="home">
+      <div class="home-content">
+        <h1>Hello, I'm <span>Glenard Pagurayan</span></h1>
+        <h3>
+          I'm a <span class="typing-text" data-text="Lead Developer"></span>
+        </h3>
         <p>
-          Hi! I'm <strong>Glenard Pagurayan</strong>, a passionate developer who focuses on crafting professional, modern, and functional capstone systems. I specialize in backend and frontend development, bringing digital ideas to life through clean code and responsive designs.
+          A passionate web developer focused on creating beautiful, responsive,
+          and user-friendly capstone systems. I specialize in transforming
+          innovative ideas into powerful digital solutions using modern web
+          technologies.
         </p>
-        <p>
-          My goal is to build systems that solve real-world problems and make a lasting impact — from healthcare management platforms to government service solutions.
-        </p>
+        <div class="home-buttons">
+          <a href="#co-developer" class="btn">Meet My Team</a>
+          <a href="#projects" class="btn-outline">View Projects</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Co Developer -->
-    <div class="about-box reverse">
-      <div class="about-img">
-        <img src="img/Lucky1.png" alt="Lucky Padua - Co Developer">
+      <div class="home-img">
+        <img src="img/Glenn.png" alt="Lead Developer - Glenard Pagurayan" />
       </div>
-      <div class="about-content">
-        <h3>Lucky Padua</h3>
-        <h4>Co-Developer</h4>
+    </section>
+
+    <!-- ===== CO-DEVELOPER SECTION ===== -->
+    <section id="co-developer" class="home co-dev">
+      <div class="home-content">
+        <h1>Hello, I'm <span>Lucky Padua</span></h1>
+        <h3>
+          I'm a <span class="typing-text" data-text="Co-Developer"></span>
+        </h3>
         <p>
-          I'm <strong>Lucky Padua</strong>, a creative co-developer who focuses on the design and user experience side of web development. I specialize in creating interactive and visually appealing websites using HTML, CSS, JavaScript, and PHP.
+          A dedicated web designer and co-developer specializing in creating
+          clean, interactive, and accessible user interfaces. I transform
+          creative visions into seamless digital experiences that engage and
+          inspire users.
         </p>
-        <p>
-          I believe that great design and functionality go hand in hand — I ensure every project not only looks amazing but also delivers an exceptional user experience.
-        </p>
+        <div class="home-buttons">
+          <a href="#about" class="btn">Learn More</a>
+          <a href="#contact" class="btn-outline">Build a Project with us!</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== SKILLS SECTION ===== -->
-<section id="skills" class="section skills">
-  <h2>Skills & Technologies</h2>
-  <p class="section-subtitle">Tools and technologies we master to build exceptional solutions</p>
+      <div class="home-img">
+        <img src="img/Lucky.png" alt="Co Developer - Lucky Padua" />
+      </div>
+    </section>
 
-  <div class="skills-container">
-    <div class="skill-card">
-      <i class="fab fa-html5"></i>
-      <h3>HTML5</h3>
-      <p>Semantic, accessible, and SEO-friendly structure for the web.</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fab fa-css3-alt"></i>
-      <h3>CSS3</h3>
-      <p>Responsive designs with modern layout systems (Flexbox & Grid).</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fab fa-js"></i>
-      <h3>JavaScript</h3>
-      <p>Interactive, dynamic front-end experiences and animations.</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fas fa-copyright"></i>
-      <h3>C++</h3>
-      <p>Powerful programming for software development and performance-critical applications.</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fab fa-php"></i>
-      <h3>PHP</h3>
-      <p>Backend development, database integration, and logic handling.</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fab fa-php"></i>
-      <h3>XAMPP</h3>
-      <p>Local server stack for creating a full-featured testing and development environment on a personal computer.</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fab fa-github"></i>
-      <h3>Git & GitHub</h3>
-      <p>Version control and collaborative development workflows.</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fas fa-code"></i>
-      <h3>C#</h3>
-      <p>Object-oriented programming for building powerful Windows and web applications.</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fas fa-laptop-code"></i>
-      <h3>Visual Basic .NET</h3>
-      <p>Developing user-friendly applications with strong UI design and logic.</p>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ===== CAPSTONE PROJECTS SECTION ===== -->
-<section id="projects" class="projects">
-  <h2 class="heading">Capstone <span>Projects</span></h2>
-  <p class="section-subtitle" style="color: #9ca3af; margin-bottom: 50px;">Comprehensive system solutions for modern challenges in the Philippines</p>
-
-  <div class="projects-container">
-    <div class="project-card">
-      <h3>Doctor/Dentist Appointment System</h3>
-      <p>Schedule appointments with doctors or dentists, includes SMS/Email reminders for patients</p>
-      <p><strong>Technologies:</strong> PHP, MySQL, HTML, CSS, JavaScript, Bootstrap, SMS/Email API</p>
-    </div>
-
-    <div class="project-card">
-      <h3>1. Barangay Information Management System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: HTML, CSS, Bootstrap, JavaScript</p>
-      <p>Backend: PHP (Laravel or Core PHP)</p>
-      <p>Database: MySQL (phpMyAdmin)</p>
-      <p>Tools: XAMPP, VS Code</p>
-    </div>
-
-    <div class="project-card">
-      <h3>2. Barangay Health Center Patient Record System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap, JavaScript</p>
-      <p>Backend: PHP (Laravel)</p>
-      <p>Database: MySQL</p>
-      <p>Extras: QR Code (patient ID)</p>
-    </div>
-
-    <div class="project-card">
-      <h3>3. Online Appointment & Queue Management System (SSS / LGU)</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: HTML, CSS, JS, AJAX</p>
-      <p>Backend: PHP (Laravel)</p>
-      <p>Database: MySQL</p>
-      <p>Real-time: Pusher / WebSockets (optional)</p>
-    </div>
-
-    <div class="project-card">
-      <h3>4. Disaster Response & Evacuation Management System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap, JavaScript</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Maps: Google Maps API</p>
-      <p>SMS Alerts: Twilio / Semaphore</p>
-    </div>
-
-    <div class="project-card">
-      <h3>5. Police Blotter & Incident Reporting System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: HTML, Bootstrap</p>
-      <p>Backend: PHP (OOP)</p>
-      <p>Database: MySQL</p>
-      <p>Security: Role-based access</p>
-    </div>
-
-    <div class="project-card">
-      <h3>6. School Enrollment & Student Information System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap, JavaScript</p>
-      <p>Backend: PHP (Laravel)</p>
-      <p>Database: MySQL</p>
-      <p>Reports: TCPDF / DomPDF</p>
-    </div>
-
-    <div class="project-card">
-      <h3>7. Scholarship Management System (LGU)</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Extras: File upload (requirements), PDF reports</p>
-    </div>
-
-    <div class="project-card">
-      <h3>8. Traffic Violation & E-Ticketing System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap, JavaScript</p>
-      <p>Backend: PHP (Laravel API)</p>
-      <p>Database: MySQL</p>
-      <p>Mobile: Android (Java / Kotlin)</p>
-      <p>QR Code scanning</p>
-    </div>
-
-    <div class="project-card">
-      <h3>9. Healthcare Appointment & Medical Record System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: HTML, CSS, JS</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Calendar: FullCalendar JS</p>
-    </div>
-
-    <div class="project-card">
-      <h3>10. Water Billing & Consumer Management System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Charts: Chart.js</p>
-      <p>Billing Reports: PDF export</p>
-    </div>
-
-    <div class="project-card">
-      <h3>11. Solid Waste Management & Collection Monitoring</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap, JavaScript</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>GIS: Google Maps API</p>
-    </div>
-
-    <div class="project-card">
-      <h3>12. Online Voting System (Barangay / Student Council)</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Security: Hashing, OTP, Audit logs</p>
-    </div>
-
-    <div class="project-card">
-      <h3>13. Local Employment Matching System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Search: AJAX, Filters</p>
-      <p>Resume Upload: PDF parser (basic)</p>
-    </div>
-
-    <div class="project-card">
-      <h3>14. Prison / Jail Management System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP (OOP / Laravel)</p>
-      <p>Database: MySQL</p>
-      <p>Modules: Inmate, Visits, Records</p>
-    </div>
-
-    <div class="project-card">
-      <h3>15. Tourism Information & Booking System (LGU)</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap, JavaScript</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Maps: Google Maps</p>
-      <p>Payment: GCash (simulation)</p>
-    </div>
-
-    <div class="project-card">
-      <h3>16. Small Business POS & Inventory System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: HTML, Bootstrap</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Barcode: Barcode Scanner API</p>
-    </div>
-
-    <div class="project-card">
-      <h3>17. Community Complaint & Request Tracking System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Notifications: Email / SMS</p>
-    </div>
-
-    <div class="project-card">
-      <h3>18. Agriculture Crop Monitoring & Farmer Registry</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Charts: Chart.js</p>
-      <p>Optional: IoT data input</p>
-    </div>
-
-    <div class="project-card">
-      <h3>19. Donation & Relief Goods Distribution System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>QR Code tracking</p>
-      <p>Reports: PDF</p>
-    </div>
-
-    <div class="project-card">
-      <h3>20. Bids and Awards Committee (BAC) Management System</h3>
-      <p><strong>Technologies:</strong></p>
-      <p>Frontend: Bootstrap</p>
-      <p>Backend: PHP (Laravel)</p>
-      <p>Database: MySQL</p>
-      <p>Role-based access</p>
-      <p>Document uploads</p>
-    </div>
-  </div>
-
-  <!-- ===== MOBILE APPLICATION PROJECTS ===== -->
-  <h2 class="heading" style="margin-top: 80px;">Mobile Application <span>Capstone Projects</span></h2>
-  <p class="section-subtitle" style="text-align: center; margin-bottom: 40px;">Android and Cross-Platform Mobile Solutions</p>
-
-  <div class="projects-container">
-    <div class="project-card">
-      <h3>1. Barangay Services Mobile App</h3>
-      <p>Residents can request certificates, submit complaints, and receive announcements.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Android (Java / Kotlin)</p>
-      <p>Backend: PHP (Laravel / REST API)</p>
-      <p>Database: MySQL</p>
-      <p>Notifications: Firebase Cloud Messaging (FCM)</p>
-    </div>
-
-    <div class="project-card">
-      <h3>2. Barangay Health Monitoring Mobile App</h3>
-      <p>Tracks patient visits, vaccination schedules, and health alerts.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Android (Kotlin)</p>
-      <p>Backend: PHP REST API</p>
-      <p>Database: MySQL</p>
-      <p>QR Code: ZXing</p>
-      <p>Charts: MPAndroidChart</p>
-    </div>
-
-    <div class="project-card">
-      <h3>3. Disaster Alert & Evacuation Mobile App</h3>
-      <p>Sends real-time disaster alerts and shows evacuation centers.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Android (Java/Kotlin)</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Maps: Google Maps API</p>
-      <p>Alerts: Firebase Push Notifications</p>
-    </div>
-
-    <div class="project-card">
-      <h3>4. Traffic Violation E-Ticketing Mobile App</h3>
-      <p>Used by traffic enforcers to issue digital tickets.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Android</p>
-      <p>Backend: PHP (Laravel API)</p>
-      <p>Database: MySQL</p>
-      <p>QR Code Scanner</p>
-      <p>Camera API</p>
-    </div>
-
-    <div class="project-card">
-      <h3>5. Healthcare Appointment Booking Mobile App</h3>
-      <p>Patients can book and track medical appointments.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Android / Flutter</p>
-      <p>Backend: PHP REST API</p>
-      <p>Database: MySQL</p>
-      <p>Calendar: Android Calendar API</p>
-    </div>
-
-    <div class="project-card">
-      <h3>6. Local Job Finder Mobile App</h3>
-      <p>Matches barangay residents with local job opportunities.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Flutter (Android & iOS)</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Search & Filters</p>
-      <p>File Upload (Resumes)</p>
-    </div>
-
-    <div class="project-card">
-      <h3>7. Tourism Guide & Booking Mobile App (LGU)</h3>
-      <p>Shows tourist spots, routes, and booking info.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Flutter</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Maps: Google Maps</p>
-      <p>Offline Mode (basic)</p>
-    </div>
-
-    <div class="project-card">
-      <h3>8. Waste Collection Schedule & Complaint Mobile App</h3>
-      <p>Residents receive garbage schedules and report issues.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Android</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Push Notifications</p>
-      <p>Camera Upload</p>
-    </div>
-
-    <div class="project-card">
-      <h3>9. Emergency Reporting Mobile App</h3>
-      <p>Allows citizens to report crimes or emergencies.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Android</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>GPS Location</p>
-      <p>Image Capture</p>
-      <p>SMS API (optional)</p>
-    </div>
-
-    <div class="project-card">
-      <h3>10. Small Business POS Mobile App</h3>
-      <p>Mobile-based sales and inventory for sari-sari stores.</p>
-      <p><strong>Technologies:</strong></p>
-      <p>Mobile: Android</p>
-      <p>Backend: PHP</p>
-      <p>Database: MySQL</p>
-      <p>Barcode Scanner</p>
-      <p>Offline Sync (basic)</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== CONTACT US SECTION ===== -->
-<section id="contact" class="contact">
-  <h2 class="heading">Contact <span>Us</span></h2>
-
-  <div class="contact-container">
-    <!-- NAME -->
-    <div class="contact-card">
-      <h3><i class="fas fa-user"></i> Name</h3>
-      <p><strong>Main Developer:</strong> Glenard Pagurayan</p>
-      <p><strong>Co-Developer:</strong> Lucky Padua</p>
-    </div>
-
-    <!-- EMAIL -->
-    <div class="contact-card">
-      <h3><i class="fas fa-envelope"></i> Email</h3>
-      <p><i class="fas fa-envelope-open-text"></i> glenard2308@gmail.com</p>
-      <p><i class="fas fa-envelope-open-text"></i> luckypadua4@gmail.com</p>
-    </div>
-
-    <!-- PHONE -->
-    <div class="contact-card">
-      <h3><i class="fas fa-phone-alt"></i> Phone</h3>
-      <p><i class="fas fa-mobile-alt"></i> +63 955 799 7409</p>
-      <p><i class="fas fa-mobile-alt"></i> +63 987 654 3210</p>
-    </div>
-
-    <!-- LOCATION -->
-    <div class="contact-card">
-      <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
-      <p><i class="fas fa-location-dot"></i> Zone 04, Centro Sur, Santo Niño, Cagayan, Philippines, 3525</p>
-    </div>
-
-    <!-- FACEBOOK -->
-    <div class="contact-card">
-      <h3><i class="fab fa-facebook"></i> Facebook</h3>
-        <a href="https://www.facebook.com/glenard.pagurayan" target="_blank">
-          <i class="fab fa-facebook-f"></i> Glenard Udlao Delayun Pagurayan
-        </a>
+    <!-- ===== ABOUT SECTION (Updated to About Us) ===== -->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p class="section-subtitle">
+        Meet the developers behind innovative capstone solutions
       </p>
+
+      <div class="about-container">
+        <!-- Main Developer -->
+        <div class="about-box">
+          <div class="about-img">
+            <img
+              src="img/Glenn1.png"
+              alt="Glenard Pagurayan - Lead Developer"
+            />
+          </div>
+          <div class="about-content">
+            <h3>Glenard Pagurayan</h3>
+            <h4>Lead Developer</h4>
+            <p>
+              Hi! I'm <strong>Glenard Pagurayan</strong>, a passionate developer
+              who focuses on crafting professional, modern, and functional
+              capstone systems. I specialize in backend and frontend
+              development, bringing digital ideas to life through clean code and
+              responsive designs.
+            </p>
+            <p>
+              My goal is to build systems that solve real-world problems and
+              make a lasting impact — from healthcare management platforms to
+              government service solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Co Developer -->
+        <div class="about-box reverse">
+          <div class="about-img">
+            <img src="img/Lucky1.png" alt="Lucky Padua - Co Developer" />
+          </div>
+          <div class="about-content">
+            <h3>Lucky Padua</h3>
+            <h4>Co-Developer</h4>
+            <p>
+              I'm <strong>Lucky Padua</strong>, a creative co-developer who
+              focuses on the design and user experience side of web development.
+              I specialize in creating interactive and visually appealing
+              websites using HTML, CSS, JavaScript, and PHP.
+            </p>
+            <p>
+              I believe that great design and functionality go hand in hand — I
+              ensure every project not only looks amazing but also delivers an
+              exceptional user experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="section skills">
+      <h2>Skills & Technologies</h2>
+      <p class="section-subtitle">
+        Tools and technologies we master to build exceptional solutions
+      </p>
+
+      <div class="skills-container">
+        <div class="skill-card">
+          <i class="fab fa-html5"></i>
+          <h3>HTML5</h3>
+          <p>Semantic, accessible, and SEO-friendly structure for the web.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-css3-alt"></i>
+          <h3>CSS3</h3>
+          <p>Responsive designs with modern layout systems (Flexbox & Grid).</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-js"></i>
+          <h3>JavaScript</h3>
+          <p>Interactive, dynamic front-end experiences and animations.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-copyright"></i>
+          <h3>C++</h3>
+          <p>
+            Powerful programming for software development and
+            performance-critical applications.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-php"></i>
+          <h3>PHP</h3>
+          <p>Backend development, database integration, and logic handling.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-php"></i>
+          <h3>XAMPP</h3>
+          <p>
+            Local server stack for creating a full-featured testing and
+            development environment on a personal computer.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-github"></i>
+          <h3>Git & GitHub</h3>
+          <p>Version control and collaborative development workflows.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-code"></i>
+          <h3>C#</h3>
+          <p>
+            Object-oriented programming for building powerful Windows and web
+            applications.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Visual Basic .NET</h3>
+          <p>
+            Developing user-friendly applications with strong UI design and
+            logic.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAPSTONE PROJECTS SECTION ===== -->
+    <section id="projects" class="projects">
+      <h2 class="heading">Capstone <span>Projects</span></h2>
+      <p class="section-subtitle" style="color: #9ca3af; margin-bottom: 50px">
+        Comprehensive system solutions for modern challenges in the Philippines
+      </p>
+
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Doctor/Dentist Appointment System</h3>
+          <p>
+            Schedule appointments with doctors or dentists, includes SMS/Email
+            reminders for patients
+          </p>
+          <p>
+            <strong>Technologies:</strong> PHP, MySQL, HTML, CSS, JavaScript,
+            Bootstrap, SMS/Email API
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>1. Barangay Information Management System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: HTML, CSS, Bootstrap, JavaScript</p>
+          <p>Backend: PHP (Laravel or Core PHP)</p>
+          <p>Database: MySQL (phpMyAdmin)</p>
+          <p>Tools: XAMPP, VS Code</p>
+        </div>
+
+        <div class="project-card">
+          <h3>2. Barangay Health Center Patient Record System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap, JavaScript</p>
+          <p>Backend: PHP (Laravel)</p>
+          <p>Database: MySQL</p>
+          <p>Extras: QR Code (patient ID)</p>
+        </div>
+
+        <div class="project-card">
+          <h3>3. Online Appointment & Queue Management System (SSS / LGU)</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: HTML, CSS, JS, AJAX</p>
+          <p>Backend: PHP (Laravel)</p>
+          <p>Database: MySQL</p>
+          <p>Real-time: Pusher / WebSockets (optional)</p>
+        </div>
+
+        <div class="project-card">
+          <h3>4. Disaster Response & Evacuation Management System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap, JavaScript</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Maps: Google Maps API</p>
+          <p>SMS Alerts: Twilio / Semaphore</p>
+        </div>
+
+        <div class="project-card">
+          <h3>5. Police Blotter & Incident Reporting System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: HTML, Bootstrap</p>
+          <p>Backend: PHP (OOP)</p>
+          <p>Database: MySQL</p>
+          <p>Security: Role-based access</p>
+        </div>
+
+        <div class="project-card">
+          <h3>6. School Enrollment & Student Information System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap, JavaScript</p>
+          <p>Backend: PHP (Laravel)</p>
+          <p>Database: MySQL</p>
+          <p>Reports: TCPDF / DomPDF</p>
+        </div>
+
+        <div class="project-card">
+          <h3>7. Scholarship Management System (LGU)</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Extras: File upload (requirements), PDF reports</p>
+        </div>
+
+        <div class="project-card">
+          <h3>8. Traffic Violation & E-Ticketing System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap, JavaScript</p>
+          <p>Backend: PHP (Laravel API)</p>
+          <p>Database: MySQL</p>
+          <p>Mobile: Android (Java / Kotlin)</p>
+          <p>QR Code scanning</p>
+        </div>
+
+        <div class="project-card">
+          <h3>9. Healthcare Appointment & Medical Record System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: HTML, CSS, JS</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Calendar: FullCalendar JS</p>
+        </div>
+
+        <div class="project-card">
+          <h3>10. Water Billing & Consumer Management System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Charts: Chart.js</p>
+          <p>Billing Reports: PDF export</p>
+        </div>
+
+        <div class="project-card">
+          <h3>11. Solid Waste Management & Collection Monitoring</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap, JavaScript</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>GIS: Google Maps API</p>
+        </div>
+
+        <div class="project-card">
+          <h3>12. Online Voting System (Barangay / Student Council)</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Security: Hashing, OTP, Audit logs</p>
+        </div>
+
+        <div class="project-card">
+          <h3>13. Local Employment Matching System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Search: AJAX, Filters</p>
+          <p>Resume Upload: PDF parser (basic)</p>
+        </div>
+
+        <div class="project-card">
+          <h3>14. Prison / Jail Management System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP (OOP / Laravel)</p>
+          <p>Database: MySQL</p>
+          <p>Modules: Inmate, Visits, Records</p>
+        </div>
+
+        <div class="project-card">
+          <h3>15. Tourism Information & Booking System (LGU)</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap, JavaScript</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Maps: Google Maps</p>
+          <p>Payment: GCash (simulation)</p>
+        </div>
+
+        <div class="project-card">
+          <h3>16. Small Business POS & Inventory System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: HTML, Bootstrap</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Barcode: Barcode Scanner API</p>
+        </div>
+
+        <div class="project-card">
+          <h3>17. Community Complaint & Request Tracking System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Notifications: Email / SMS</p>
+        </div>
+
+        <div class="project-card">
+          <h3>18. Agriculture Crop Monitoring & Farmer Registry</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Charts: Chart.js</p>
+          <p>Optional: IoT data input</p>
+        </div>
+
+        <div class="project-card">
+          <h3>19. Donation & Relief Goods Distribution System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>QR Code tracking</p>
+          <p>Reports: PDF</p>
+        </div>
+
+        <div class="project-card">
+          <h3>20. Bids and Awards Committee (BAC) Management System</h3>
+          <p><strong>Technologies:</strong></p>
+          <p>Frontend: Bootstrap</p>
+          <p>Backend: PHP (Laravel)</p>
+          <p>Database: MySQL</p>
+          <p>Role-based access</p>
+          <p>Document uploads</p>
+        </div>
+      </div>
+
+      <!-- ===== MOBILE APPLICATION PROJECTS ===== -->
+      <h2 class="heading" style="margin-top: 80px">
+        Mobile Application <span>Capstone Projects</span>
+      </h2>
+      <p
+        class="section-subtitle"
+        style="text-align: center; margin-bottom: 40px"
+      >
+        Android and Cross-Platform Mobile Solutions
+      </p>
+
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>1. Barangay Services Mobile App</h3>
+          <p>
+            Residents can request certificates, submit complaints, and receive
+            announcements.
+          </p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Android (Java / Kotlin)</p>
+          <p>Backend: PHP (Laravel / REST API)</p>
+          <p>Database: MySQL</p>
+          <p>Notifications: Firebase Cloud Messaging (FCM)</p>
+        </div>
+
+        <div class="project-card">
+          <h3>2. Barangay Health Monitoring Mobile App</h3>
+          <p>
+            Tracks patient visits, vaccination schedules, and health alerts.
+          </p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Android (Kotlin)</p>
+          <p>Backend: PHP REST API</p>
+          <p>Database: MySQL</p>
+          <p>QR Code: ZXing</p>
+          <p>Charts: MPAndroidChart</p>
+        </div>
+
+        <div class="project-card">
+          <h3>3. Disaster Alert & Evacuation Mobile App</h3>
+          <p>Sends real-time disaster alerts and shows evacuation centers.</p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Android (Java/Kotlin)</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Maps: Google Maps API</p>
+          <p>Alerts: Firebase Push Notifications</p>
+        </div>
+
+        <div class="project-card">
+          <h3>4. Traffic Violation E-Ticketing Mobile App</h3>
+          <p>Used by traffic enforcers to issue digital tickets.</p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Android</p>
+          <p>Backend: PHP (Laravel API)</p>
+          <p>Database: MySQL</p>
+          <p>QR Code Scanner</p>
+          <p>Camera API</p>
+        </div>
+
+        <div class="project-card">
+          <h3>5. Healthcare Appointment Booking Mobile App</h3>
+          <p>Patients can book and track medical appointments.</p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Android / Flutter</p>
+          <p>Backend: PHP REST API</p>
+          <p>Database: MySQL</p>
+          <p>Calendar: Android Calendar API</p>
+        </div>
+
+        <div class="project-card">
+          <h3>6. Local Job Finder Mobile App</h3>
+          <p>Matches barangay residents with local job opportunities.</p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Flutter (Android & iOS)</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Search & Filters</p>
+          <p>File Upload (Resumes)</p>
+        </div>
+
+        <div class="project-card">
+          <h3>7. Tourism Guide & Booking Mobile App (LGU)</h3>
+          <p>Shows tourist spots, routes, and booking info.</p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Flutter</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Maps: Google Maps</p>
+          <p>Offline Mode (basic)</p>
+        </div>
+
+        <div class="project-card">
+          <h3>8. Waste Collection Schedule & Complaint Mobile App</h3>
+          <p>Residents receive garbage schedules and report issues.</p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Android</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Push Notifications</p>
+          <p>Camera Upload</p>
+        </div>
+
+        <div class="project-card">
+          <h3>9. Emergency Reporting Mobile App</h3>
+          <p>Allows citizens to report crimes or emergencies.</p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Android</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>GPS Location</p>
+          <p>Image Capture</p>
+          <p>SMS API (optional)</p>
+        </div>
+
+        <div class="project-card">
+          <h3>10. Small Business POS Mobile App</h3>
+          <p>Mobile-based sales and inventory for sari-sari stores.</p>
+          <p><strong>Technologies:</strong></p>
+          <p>Mobile: Android</p>
+          <p>Backend: PHP</p>
+          <p>Database: MySQL</p>
+          <p>Barcode Scanner</p>
+          <p>Offline Sync (basic)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT US SECTION ===== -->
+    <section id="contact" class="contact">
+      <h2 class="heading">Get In <span>Touch</span></h2>
+      <p class="section-subtitle" style="color: #9ca3af; margin-bottom: 60px">
+        Let's discuss your next capstone project
+      </p>
+
+      <div class="contact-wrapper">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h4>Email Us</h4>
+              <a href="mailto:glenard2308@gmail.com">glenard2308@gmail.com</a>
+              <a href="mailto:luckypadua4@gmail.com">luckypadua4@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="info-content">
+              <h4>Call Us</h4>
+              <a href="tel:+639557997409">+63 955 799 7409</a>
+              <a href="tel:+639876543210">+63 987 654 3210</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h4>Location</h4>
+              <p>
+                Zone 04, Centro Sur<br />Santo Niño, Cagayan<br />Philippines,
+                3525
+              </p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/glenard.pagurayan"
+                target="_blank"
+                title="Glenard Pagurayan"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://github.com/Glenn-IT"
+                target="_blank"
+                title="Glenn-IT"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/luckypadua"
+                target="_blank"
+                title="Lucky Padua"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://github.com/LuckyPadua-web"
+                target="_blank"
+                title="LuckyPadua-web"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Members -->
+        <div class="team-cards">
+          <div class="team-card">
+            <div class="team-avatar">
+              <img src="img/Glenn1.png" alt="Glenard Pagurayan" />
+            </div>
+            <div class="team-info">
+              <h3>Glenard Pagurayan</h3>
+              <p class="role">Lead Developer</p>
+              <p class="description">Backend & Frontend Specialist</p>
+              <div class="team-contact">
+                <a href="mailto:glenard2308@gmail.com" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/glenard.pagurayan"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://github.com/Glenn-IT"
+                  target="_blank"
+                  title="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">
+              <img src="img/Lucky1.png" alt="Lucky Padua" />
+            </div>
+            <div class="team-info">
+              <h3>Lucky Padua</h3>
+              <p class="role">Co-Developer</p>
+              <p class="description">UI/UX & Frontend Specialist</p>
+              <div class="team-contact">
+                <a href="mailto:luckypadua4@gmail.com" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/luckypadua"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://github.com/LuckyPadua-web"
+                  target="_blank"
+                  title="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
       <p>
-        <a href="https://www.facebook.com/luckypadua" target="_blank">
-          <i class="fab fa-facebook-f"></i> Lucky Baltazar Padua
-        </a>
+        © 2025 <span>Capstones System Developers Team</span>. All Rights
+        Reserved.
       </p>
-    </div>
+    </footer>
 
-    <!-- GITHUB -->
-    <div class="contact-card">
-      <h3><i class="fab fa-github"></i> GitHub</h3>
-      <p>
-        <a href="https://github.com/Glenn-IT" target="_blank">
-          <i class="fab fa-github"></i> Glenn-IT
-        </a>
-      </p>
-      <p>
-        <a href="https://github.com/LuckyPadua-web" target="_blank">
-          <i class="fab fa-github"></i> LuckyPadua-web
-        </a>
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ===== FOOTER ===== -->
-<footer>
-  <p>© 2025 <span>Capstones System Developers Team</span>. All Rights Reserved.</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
