@@ -123,22 +123,26 @@ document.addEventListener("DOMContentLoaded", function () {
         card.appendChild(body);
       }
 
+      // Remove old event listeners by cloning the header
+      const newHeader = header.cloneNode(true);
+      header.parentNode.replaceChild(newHeader, header);
+
       // Reset any inline styles/classes when not mobile
       if (!isMobile) {
         card.classList.remove("expanded");
         body.style.maxHeight = null;
-        // Move body children back (optional: keep structure but visible)
-        // We leave DOM structure intact so desktop CSS continues to display content normally
+        newHeader.style.cursor = "default";
         return;
       }
 
-      // Ensure collapsed initial state
+      // Ensure collapsed initial state on mobile
       card.classList.remove("expanded");
       body.style.maxHeight = "0px";
 
-      // Add click toggle on header
-      header.style.cursor = "pointer";
-      header.addEventListener("click", function () {
+      // Add click toggle on header for mobile
+      newHeader.style.cursor = "pointer";
+      newHeader.addEventListener("click", function (e) {
+        e.stopPropagation();
         const expanded = card.classList.toggle("expanded");
         if (expanded) {
           // set explicit maxHeight for smooth transition
@@ -161,4 +165,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize on load
   initProjectAccordion();
+
+  // Mobile menu toggle
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-links");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+
+      // Toggle icon between bars and times
+      const icon = menuToggle.querySelector("i");
+      if (icon.classList.contains("fa-bars")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+      } else {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+      }
+    });
+
+    // Close menu when clicking on a link
+    const navLinkItems = document.querySelectorAll(".nav-links a");
+    navLinkItems.forEach((link) => {
+      link.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+        const icon = menuToggle.querySelector("i");
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+      });
+    });
+  }
 });

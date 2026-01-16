@@ -1445,11 +1445,44 @@ footer span {
   }
 
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 40px 30px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    border-left: 1px solid rgba(79, 70, 229, 0.3);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 1.1rem;
+    padding: 10px 0;
   }
 
   .menu-toggle {
     display: block;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu-toggle i {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
   }
 
   section {
@@ -1524,14 +1557,49 @@ footer span {
   .team-card {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+  }
+
+  .team-info {
+    text-align: center;
   }
 
   .team-content {
     text-align: center;
   }
 
+  .team-contact {
+    justify-content: center;
+  }
+
   .social-icons {
     justify-content: center;
+  }
+
+  .social-links h4 {
+    text-align: center;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .info-content {
+    text-align: center;
+  }
+
+  .info-content a,
+  .info-content p {
+    text-align: center;
+  }
+
+  .team-avatar {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
   }
 }
 
