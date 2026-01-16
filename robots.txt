@@ -1,0 +1,22 @@
+# NeKo-SysDev.Online - Robots.txt
+# https://neko-sysdev.online/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location (update this after creating sitemap.xml)
+Sitemap: https://neko-sysdev.online/sitemap.xml
+
+# Disallow access to documentation files
+Disallow: /*.md$
+Disallow: /PRE-LAUNCH-CHECKLIST.md
+Disallow: /QUICK-REFERENCE.md
+Disallow: /FINAL-REVIEW.md
+Disallow: /TROUBLESHOOTING.md
+Disallow: /README.md
+
+# Allow all images
+Allow: /img/
+
+# Crawl-delay (optional, be polite to search engines)
+Crawl-delay: 1
