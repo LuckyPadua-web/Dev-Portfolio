@@ -55,6 +55,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Floating contact button smooth scroll
+  const floatingContact = document.querySelector(".floating-contact");
+  if (floatingContact) {
+    floatingContact.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  }
+
   // Header scroll effect
   const header = document.querySelector("header");
   let lastScroll = 0;
