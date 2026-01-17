@@ -439,6 +439,166 @@ section {
   }
 }
 
+/* ===== Why Choose Us Section ===== */
+.why-choose-us {
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+  padding: 100px 8%;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(79, 70, 229, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.why-choose-us h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.why-choose-us h2 span {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.why-choose-us .section-subtitle {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.benefit-item {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 70, 229, 0.1),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.benefit-item:hover::before {
+  left: 100%;
+}
+
+.benefit-item:hover {
+  transform: translateY(-10px);
+  border-color: rgba(79, 70, 229, 0.5);
+  box-shadow: 0 15px 40px rgba(79, 70, 229, 0.3);
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.5);
+}
+
+.benefit-icon i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.benefit-item h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  color: #9ca3af;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Responsive Why Choose Us */
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 80px 5%;
+  }
+
+  .why-choose-us h2 {
+    font-size: 2.2rem;
+  }
+
+  .benefits-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .benefit-item {
+    padding: 35px 25px;
+  }
+
+  .benefit-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .benefit-icon i {
+    font-size: 1.8rem;
+  }
+
+  .benefit-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
 /* ===== Skills Section ===== */
 .skills {
   background: #0a0a0a;
