@@ -298,7 +298,9 @@ section {
   border-radius: 15px;
   padding: 30px 20px;
   width: 250px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .dev-card:hover {
@@ -1035,7 +1037,9 @@ section {
   max-width: 350px;
   text-align: left;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .project-card:hover {
