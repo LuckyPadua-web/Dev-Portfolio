@@ -51,6 +51,20 @@ header:hover {
   font-weight: 600;
   color: #fff;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .logo span {
@@ -1613,6 +1627,15 @@ footer span {
     display: block;
     font-size: 1.1rem;
     padding: 10px 0;
+  }
+
+  .logo-img {
+    height: 33px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    gap: 5px;
   }
 
   .menu-toggle {
