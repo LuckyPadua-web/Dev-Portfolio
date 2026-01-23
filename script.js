@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Observe all project cards and skill cards
   const cards = document.querySelectorAll(
-    ".project-card, .skill-card, .about-box, .contact-card"
+    ".project-card, .skill-card, .about-box, .contact-card",
   );
   cards.forEach((card) => {
     card.style.opacity = "0";
@@ -212,5 +212,92 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.classList.add("fa-bars");
       });
     });
+  }
+});
+
+// ===== TESTIMONIALS SLIDER =====
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialCards = document.querySelectorAll(".testimonial-card");
+  const prevBtn = document.querySelector(".testimonial-nav.prev");
+  const nextBtn = document.querySelector(".testimonial-nav.next");
+  const dotsContainer = document.querySelector(".testimonial-dots");
+
+  let currentIndex = 0;
+  const totalCards = testimonialCards.length;
+
+  // Create dots
+  for (let i = 0; i < totalCards; i++) {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  const dots = document.querySelectorAll(".testimonial-dots .dot");
+
+  function updateSlider() {
+    testimonialCards.forEach((card, index) => {
+      card.classList.remove("active", "prev");
+      if (index === currentIndex) {
+        card.classList.add("active");
+      } else if (index < currentIndex) {
+        card.classList.add("prev");
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalCards;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    updateSlider();
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    updateSlider();
+  }
+
+  // Event listeners
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  // Auto-slide every 5 seconds
+  setInterval(nextSlide, 5000);
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") prevSlide();
+    if (e.key === "ArrowRight") nextSlide();
+  });
+
+  // Touch/Swipe support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const testimonialContainer = document.querySelector(
+    ".testimonials-container",
+  );
+
+  testimonialContainer.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  testimonialContainer.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    if (touchEndX < touchStartX - 50) nextSlide(); // Swipe left
+    if (touchEndX > touchStartX + 50) prevSlide(); // Swipe right
   }
 });
