@@ -1020,6 +1020,343 @@ section {
   }
 }
 
+/* ===== Schedule Meeting Modal ===== */
+.schedule-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.schedule-modal.active {
+  display: flex;
+}
+
+.schedule-modal-content {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16162a 100%);
+  border-radius: 20px;
+  border: 2px solid rgba(79, 70, 229, 0.4);
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 40px;
+  animation: modalSlideIn 0.4s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.schedule-modal-close:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  transform: rotate(90deg);
+}
+
+.schedule-modal-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.schedule-modal-header i {
+  font-size: 4rem;
+  color: #7c3aed;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.schedule-modal-header h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.schedule-modal-header p {
+  color: #9ca3af;
+  font-size: 1.1rem;
+}
+
+.schedule-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.schedule-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 25px;
+  background: rgba(79, 70, 229, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  transition: all 0.3s ease;
+}
+
+.schedule-step:hover {
+  border-color: rgba(79, 70, 229, 0.5);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.2);
+  transform: translateX(5px);
+}
+
+.step-number {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h4 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.step-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+}
+
+.step-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(66, 133, 244, 0.5);
+}
+
+.step-list {
+  list-style: none;
+  margin: 15px 0;
+  padding: 0;
+}
+
+.step-list li {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.step-list li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: #7c3aed;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.step-list li strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.email-copy-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.email-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(79, 70, 229, 0.3);
+}
+
+.email-item code {
+  flex: 1;
+  color: #7c3aed;
+  font-size: 0.95rem;
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+}
+
+.copy-btn {
+  background: rgba(79, 70, 229, 0.2);
+  border: 1px solid rgba(79, 70, 229, 0.4);
+  color: #7c3aed;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.copy-btn:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.copy-btn.copied {
+  background: #10b981;
+  color: #fff;
+  border-color: #10b981;
+}
+
+.copy-btn.copied::after {
+  content: "Copied!";
+  margin-left: 5px;
+}
+
+.schedule-modal-footer {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.footer-note {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer-note i {
+  color: #7c3aed;
+  margin-right: 5px;
+}
+
+.footer-note a {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-note a:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+/* Responsive Schedule Modal */
+@media (max-width: 768px) {
+  .schedule-modal-content {
+    padding: 30px 20px;
+    max-height: 95vh;
+  }
+
+  .schedule-modal-header i {
+    font-size: 3rem;
+  }
+
+  .schedule-modal-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .schedule-modal-close {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .schedule-step {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .step-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .email-copy-section {
+    gap: 10px;
+  }
+
+  .email-item {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .email-item code {
+    font-size: 0.85rem;
+  }
+}
+
 /* ===== Testimonials Section ===== */
 .testimonials {
   background: #0a0a0a;

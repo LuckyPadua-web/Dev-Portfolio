@@ -403,14 +403,127 @@
               Let's discuss your project and choose the best collaboration
               method for you
             </p>
-            <a href="#contact" class="cta-button">
+            <button class="cta-button" id="scheduleMeetingBtn">
               <i class="fas fa-calendar-alt"></i>
               Schedule a Meeting
-            </a>
+            </button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ===== SCHEDULE MEETING MODAL ===== -->
+    <div id="scheduleMeetingModal" class="schedule-modal">
+      <div class="schedule-modal-content">
+        <button class="schedule-modal-close" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="schedule-modal-header">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Schedule a Meeting with Us</h3>
+          <p>Follow these simple steps to book your consultation</p>
+        </div>
+
+        <div class="schedule-steps">
+          <div class="schedule-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Open Google Calendar</h4>
+              <p>Click the button below to open Google Calendar in a new tab</p>
+              <a
+                href="https://calendar.google.com/calendar/u/0/r/eventedit"
+                target="_blank"
+                class="step-button"
+              >
+                <i class="fab fa-google"></i>
+                Open Google Calendar
+              </a>
+            </div>
+          </div>
+
+          <div class="schedule-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Create Your Event</h4>
+              <p>Fill in the event details:</p>
+              <ul class="step-list">
+                <li>
+                  <strong>Title:</strong> "Capstone/System Development
+                  Consultation"
+                </li>
+                <li>
+                  <strong>Date & Time:</strong> Choose your preferred schedule
+                </li>
+                <li><strong>Duration:</strong> 30-60 minutes recommended</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="schedule-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Add Us as Guests</h4>
+              <p>In the "Add guests" field, enter our email addresses:</p>
+              <div class="email-copy-section">
+                <div class="email-item">
+                  <code>glenard2308@gmail.com</code>
+                  <button class="copy-btn" data-email="glenard2308@gmail.com">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+                <div class="email-item">
+                  <code>luckypadua4@gmail.com</code>
+                  <button class="copy-btn" data-email="luckypadua4@gmail.com">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Add Meeting Details</h4>
+              <p>In the description, please include:</p>
+              <ul class="step-list">
+                <li>Your name and school/organization</li>
+                <li>
+                  Type of project you need (Capstone, Website, Mobile App)
+                </li>
+                <li>Brief description of your requirements</li>
+                <li>
+                  Preferred meeting method (Google Meet, In-person, TeamViewer)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="schedule-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h4>Send Invitation</h4>
+              <p>
+                Click "Save" and Google Calendar will automatically send us an
+                invitation. We'll confirm your meeting shortly!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-modal-footer">
+          <p class="footer-note">
+            <i class="fas fa-info-circle"></i>
+            Need immediate assistance? Contact us directly via
+            <a href="https://m.me/glenard.pagurayan" target="_blank"
+              >Facebook Messenger</a
+            >
+            or call <a href="tel:+639557997409">+63 955 799 7409</a>
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- ===== TESTIMONIALS SECTION ===== -->
     <section id="testimonials" class="testimonials">

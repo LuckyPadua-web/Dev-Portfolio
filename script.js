@@ -322,3 +322,89 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// ===== SCHEDULE MEETING MODAL =====
+document.addEventListener("DOMContentLoaded", function () {
+  const scheduleBtn = document.getElementById("scheduleMeetingBtn");
+  const modal = document.getElementById("scheduleMeetingModal");
+  const closeBtn = modal.querySelector(".schedule-modal-close");
+  const copyBtns = modal.querySelectorAll(".copy-btn");
+
+  // Open modal
+  scheduleBtn.addEventListener("click", function () {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+
+  // Close modal function
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  // Close button
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close on background click
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeModal();
+    }
+  });
+
+  // Copy email functionality
+  copyBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const email = this.getAttribute("data-email");
+
+      // Copy to clipboard
+      navigator.clipboard
+        .writeText(email)
+        .then(() => {
+          // Add copied state
+          this.classList.add("copied");
+          const icon = this.querySelector("i");
+          icon.classList.remove("fa-copy");
+          icon.classList.add("fa-check");
+
+          // Reset after 2 seconds
+          setTimeout(() => {
+            this.classList.remove("copied");
+            icon.classList.remove("fa-check");
+            icon.classList.add("fa-copy");
+          }, 2000);
+        })
+        .catch((err) => {
+          console.error("Failed to copy email:", err);
+          // Fallback for older browsers
+          const textArea = document.createElement("textarea");
+          textArea.value = email;
+          document.body.appendChild(textArea);
+          textArea.select();
+          try {
+            document.execCommand("copy");
+            this.classList.add("copied");
+            const icon = this.querySelector("i");
+            icon.classList.remove("fa-copy");
+            icon.classList.add("fa-check");
+
+            setTimeout(() => {
+              this.classList.remove("copied");
+              icon.classList.remove("fa-check");
+              icon.classList.add("fa-copy");
+            }, 2000);
+          } catch (err) {
+            console.error("Fallback copy failed:", err);
+          }
+          document.body.removeChild(textArea);
+        });
+    });
+  });
+});
