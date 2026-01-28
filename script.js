@@ -302,56 +302,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// ===== PROOF OF CONVERSATION MODAL =====
+// ===== PROOF OF CONVERSATION DROPDOWN =====
 document.addEventListener("DOMContentLoaded", function () {
-  // Create modal element
-  const modal = document.createElement("div");
-  modal.className = "proof-modal";
-  modal.innerHTML = `
-    <div class="proof-modal-content">
-      <button class="proof-modal-close" aria-label="Close modal">
-        <i class="fas fa-times"></i>
-      </button>
-      <img src="" alt="Conversation proof" />
-    </div>
-  `;
-  document.body.appendChild(modal);
+  const proofCards = document.querySelectorAll(".proof-card");
 
-  const proofItems = document.querySelectorAll(".proof-item");
-  const modalImg = modal.querySelector("img");
-  const closeBtn = modal.querySelector(".proof-modal-close");
+  proofCards.forEach((card) => {
+    const header = card.querySelector(".proof-header");
 
-  // Open modal on click
-  proofItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      const imgSrc = this.querySelector("img").src;
-      const imgAlt = this.querySelector("img").alt;
-      modalImg.src = imgSrc;
-      modalImg.alt = imgAlt;
-      modal.classList.add("active");
-      document.body.style.overflow = "hidden"; // Prevent scrolling
+    header.addEventListener("click", function () {
+      // Close other cards
+      proofCards.forEach((otherCard) => {
+        if (otherCard !== card && otherCard.classList.contains("active")) {
+          otherCard.classList.remove("active");
+        }
+      });
+
+      // Toggle current card
+      card.classList.toggle("active");
     });
-  });
-
-  // Close modal
-  function closeModal() {
-    modal.classList.remove("active");
-    document.body.style.overflow = ""; // Re-enable scrolling
-  }
-
-  closeBtn.addEventListener("click", closeModal);
-
-  // Close on background click
-  modal.addEventListener("click", function (e) {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  // Close on Escape key
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && modal.classList.contains("active")) {
-      closeModal();
-    }
   });
 });

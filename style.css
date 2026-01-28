@@ -920,129 +920,76 @@ section {
   position: relative;
 }
 
-.proof-item {
-  position: relative;
+.proof-card {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16162a 100%);
+  border: 2px solid rgba(79, 70, 229, 0.2);
   border-radius: 16px;
   overflow: hidden;
-  border: 2px solid rgba(79, 70, 229, 0.2);
-  background: #1a1a2e;
   transition: all 0.4s ease;
   cursor: pointer;
-  aspect-ratio: 3/4;
 }
 
-.proof-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.proof-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(79, 70, 229, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-.proof-overlay i {
-  font-size: 3rem;
-  color: #fff;
-  transform: scale(0.5);
-  transition: transform 0.4s ease;
-}
-
-.proof-item:hover {
-  transform: translateY(-10px);
+.proof-card:hover {
   border-color: rgba(79, 70, 229, 0.6);
   box-shadow: 0 20px 50px rgba(79, 70, 229, 0.3);
+  transform: translateY(-5px);
 }
 
-.proof-item:hover img {
-  transform: scale(1.1);
-}
-
-.proof-item:hover .proof-overlay {
-  opacity: 1;
-}
-
-.proof-item:hover .proof-overlay i {
-  transform: scale(1);
-}
-
-/* Modal for full-size image view */
-.proof-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 10000;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.proof-modal.active {
+.proof-header {
   display: flex;
-}
-
-.proof-modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  position: relative;
-  animation: zoomIn 0.3s ease;
-}
-
-.proof-modal-content img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-}
-
-.proof-modal-close {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #fff;
-  color: #fff;
-  font-size: 2rem;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 20px 25px;
+  background: rgba(79, 70, 229, 0.1);
+  border-bottom: 1px solid rgba(79, 70, 229, 0.2);
   transition: all 0.3s ease;
 }
 
-.proof-modal-close:hover {
-  background: #4f46e5;
-  border-color: #4f46e5;
-  transform: rotate(90deg);
+.proof-card:hover .proof-header {
+  background: rgba(79, 70, 229, 0.15);
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.proof-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.proof-header i {
+  font-size: 1.5rem;
+  color: #4f46e5;
+  transition: transform 0.3s ease;
+}
+
+.proof-card.active .proof-header i {
+  transform: rotate(180deg);
+}
+
+.proof-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 25px;
+}
+
+.proof-card.active .proof-content {
+  max-height: 2000px;
+  padding: 25px;
+}
+
+.proof-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  border: 2px solid rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+}
+
+.proof-content img:hover {
+  border-color: rgba(79, 70, 229, 0.6);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.2);
 }
 
 /* Responsive Proof of Conversation */
@@ -1056,28 +1003,32 @@ section {
   }
 
   .proof-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .proof-item {
-    aspect-ratio: 3/4;
+  .proof-header {
+    padding: 15px 20px;
   }
 
-  .proof-overlay i {
-    font-size: 2rem;
+  .proof-header h3 {
+    font-size: 1.1rem;
   }
 
-  .proof-modal-content {
-    max-width: 95%;
-    max-height: 85%;
+  .proof-header i {
+    font-size: 1.2rem;
   }
 
-  .proof-modal-close {
-    top: -35px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+  .proof-content {
+    padding: 0 20px;
+  }
+
+  .proof-card.active .proof-content {
+    padding: 20px;
+  }
+}
+  .proof-card.active .proof-content {
+    padding: 20px;
   }
 }
 
